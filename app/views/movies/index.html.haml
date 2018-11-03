@@ -1,12 +1,13 @@
 -#  This file is app/views/movies/index.html.haml
 %h1 All Movies
 
+
 %table#movies
   %thead
     %tr
-      %th Movie Title
-      %th Rating
-      %th Release Date
+      %th= link_to "Movie Title", :sort => "movie title"
+      %th= link_to "Rating", :sort => "rating"
+      %th= link_to "Release Date", :sort => "release date"
       %th More Info
   %tbody
     - @movies.each do |movie|
